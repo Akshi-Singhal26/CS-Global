@@ -248,6 +248,8 @@ button {
   overflow: hidden;
   padding: 4rem 0 5rem;
   background:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(244, 248, 253, 0.62)),
+    url("assets/home-bg.jpg") center / cover no-repeat,
     radial-gradient(circle at top right, rgba(111, 164, 224, 0.15), transparent 32%),
     linear-gradient(180deg, #ffffff 0%, #f4f8fd 100%);
 }
