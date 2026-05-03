@@ -1,15 +1,16 @@
 :root {
-  --color-primary: #0b1f3a;
-  --color-secondary: #1e3a5f;
+  --color-primary: #285a48;
+  --color-secondary: #408a71;
+  --color-header-footer: #285a48;
   --color-background: #ffffff;
-  --color-surface: #f5f7fa;
+  --color-surface: #f4fbf7;
   --color-text: #1a1a1a;
-  --color-text-muted: #5d6876;
-  --color-border: rgba(11, 31, 58, 0.08);
-  --gradient-soft: linear-gradient(135deg, rgba(30, 58, 95, 0.06), rgba(103, 148, 201, 0.18));
-  --gradient-strong: linear-gradient(135deg, #0b1f3a, #294e77);
-  --shadow-soft: 0 18px 40px rgba(11, 31, 58, 0.08);
-  --shadow-card: 0 10px 24px rgba(11, 31, 58, 0.06);
+  --color-text-muted: #4f655c;
+  --color-border: rgba(40, 90, 72, 0.12);
+  --gradient-soft: linear-gradient(135deg, rgba(176, 228, 204, 0.28), rgba(64, 138, 113, 0.22));
+  --gradient-strong: linear-gradient(135deg, #408a71, #285a48);
+  --shadow-soft: 0 18px 40px rgba(40, 90, 72, 0.14);
+  --shadow-card: 0 10px 24px rgba(40, 90, 72, 0.1);
   --radius-md: 12px;
   --container-width: 1120px;
   --nav-height: 80px;
@@ -99,8 +100,8 @@ button {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid rgba(11, 31, 58, 0.05);
+  background: rgba(40, 90, 72, 0.95);
+  border-bottom: 1px solid rgba(40, 90, 72, 0.14);
   backdrop-filter: blur(18px);
 }
 
@@ -154,12 +155,12 @@ button {
 
 .brand-text strong {
   font-size: 0.98rem;
-  color: var(--color-primary);
+  color: #ffffff;
 }
 
 .brand-text span {
   font-size: 0.78rem;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .nav-toggle {
@@ -172,7 +173,7 @@ button {
   padding: 0;
   border: 1px solid var(--color-border);
   border-radius: 12px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .nav-toggle span {
@@ -203,7 +204,7 @@ button {
   display: grid;
   gap: 0.25rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(244, 251, 247, 0.98);
   border: 1px solid var(--color-border);
   border-radius: 18px;
   box-shadow: var(--shadow-soft);
@@ -223,7 +224,7 @@ button {
   position: relative;
   padding: 0.85rem 0.5rem;
   font-weight: 500;
-  color: var(--color-primary);
+  color: #ffffff;
 }
 
 .nav-menu a::after {
@@ -234,7 +235,7 @@ button {
   width: 0;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(30, 58, 95, 0.6), rgba(89, 145, 210, 0.85));
+  background: linear-gradient(90deg, rgba(64, 138, 113, 0.92), rgba(40, 90, 72, 0.98));
   transition: width var(--transition);
 }
 
@@ -250,20 +251,20 @@ button {
   background:
     linear-gradient(rgba(255, 255, 255, 0.5), rgba(244, 248, 253, 0.62)),
     url("assets/home-bg.jpg") center / cover no-repeat,
-    radial-gradient(circle at top right, rgba(111, 164, 224, 0.15), transparent 32%),
-    linear-gradient(180deg, #ffffff 0%, #f4f8fd 100%);
+    radial-gradient(circle at top right, rgba(176, 228, 204, 0.24), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #eef8f3 100%);
 }
 
 .hero-map {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 12% 32%, rgba(30, 58, 95, 0.05) 0 2px, transparent 3px),
-    radial-gradient(circle at 22% 52%, rgba(30, 58, 95, 0.05) 0 2px, transparent 3px),
-    radial-gradient(circle at 42% 28%, rgba(30, 58, 95, 0.05) 0 2px, transparent 3px),
-    radial-gradient(circle at 62% 44%, rgba(30, 58, 95, 0.05) 0 2px, transparent 3px),
-    radial-gradient(circle at 78% 24%, rgba(30, 58, 95, 0.05) 0 2px, transparent 3px),
-    radial-gradient(circle at 84% 62%, rgba(30, 58, 95, 0.05) 0 2px, transparent 3px);
+    radial-gradient(circle at 12% 32%, rgba(40, 90, 72, 0.07) 0 2px, transparent 3px),
+    radial-gradient(circle at 22% 52%, rgba(40, 90, 72, 0.07) 0 2px, transparent 3px),
+    radial-gradient(circle at 42% 28%, rgba(40, 90, 72, 0.07) 0 2px, transparent 3px),
+    radial-gradient(circle at 62% 44%, rgba(40, 90, 72, 0.07) 0 2px, transparent 3px),
+    radial-gradient(circle at 78% 24%, rgba(40, 90, 72, 0.07) 0 2px, transparent 3px),
+    radial-gradient(circle at 84% 62%, rgba(40, 90, 72, 0.07) 0 2px, transparent 3px);
   opacity: 0.55;
   pointer-events: none;
 }
@@ -333,14 +334,14 @@ button {
 }
 
 .button-primary {
-  color: #fff;
-  background: linear-gradient(135deg, #0b1f3a, #315886);
-  box-shadow: 0 14px 28px rgba(11, 31, 58, 0.16);
+  color: #ffffff;
+  background: linear-gradient(135deg, #408a71, #285a48);
+  box-shadow: 0 14px 28px rgba(40, 90, 72, 0.2);
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  box-shadow: 0 18px 34px rgba(11, 31, 58, 0.22);
+  box-shadow: 0 18px 34px rgba(40, 90, 72, 0.28);
 }
 
 .hero-panel {
@@ -486,9 +487,9 @@ button {
   align-items: center;
   min-height: 46px;
   padding: 0.8rem 1rem;
-  border: 1px solid rgba(30, 58, 95, 0.12);
+  border: 1px solid rgba(64, 138, 113, 0.28);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(176, 228, 204, 0.28);
   color: var(--color-primary);
   font-weight: 500;
   box-shadow: var(--shadow-card);
@@ -497,7 +498,7 @@ button {
 .values-section {
   text-align: center;
   background:
-    linear-gradient(180deg, rgba(245, 247, 250, 0.35), rgba(255, 255, 255, 0.95)),
+    linear-gradient(180deg, rgba(176, 228, 204, 0.22), rgba(255, 255, 255, 0.95)),
     var(--color-background);
 }
 
@@ -539,7 +540,7 @@ button {
 .field textarea {
   width: 100%;
   padding: 0.95rem 1rem;
-  border: 1px solid rgba(11, 31, 58, 0.12);
+  border: 1px solid rgba(40, 90, 72, 0.14);
   border-radius: 12px;
   background: #fff;
   color: var(--color-text);
@@ -549,8 +550,8 @@ button {
 .field input:focus,
 .field textarea:focus {
   outline: none;
-  border-color: rgba(30, 58, 95, 0.44);
-  box-shadow: 0 0 0 4px rgba(30, 58, 95, 0.08);
+  border-color: rgba(64, 138, 113, 0.5);
+  box-shadow: 0 0 0 4px rgba(64, 138, 113, 0.12);
 }
 
 .field input[aria-invalid="true"],
@@ -572,18 +573,25 @@ button {
 
 .site-footer {
   padding: 3rem 0;
-  background: var(--color-primary);
-  color: rgba(255, 255, 255, 0.84);
+  background: var(--color-header-footer);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .site-footer h3 {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer-brand .brand-mark {
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.site-footer p,
+.site-footer .footer-tagline,
+.site-footer .brand-text strong,
+.site-footer .brand-text span {
+  color: #ffffff;
 }
 
 .footer-brand .brand-text strong,
