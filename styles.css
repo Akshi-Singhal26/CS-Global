@@ -400,6 +400,17 @@ button {
   gap: 1rem;
 }
 
+.about-highlights {
+  height: 100%;
+}
+
+.about-highlights .overview-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .about-copy p,
 .feature-card p,
 .service-card p,
@@ -444,6 +455,12 @@ button {
 
 .mission-list li + li {
   margin-top: 0.6rem;
+}
+
+#vision .feature-card.overview-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .icon-badge {
@@ -509,6 +526,13 @@ button {
   margin: 0.4rem 0 1.5rem;
   color: var(--color-secondary);
   font-weight: 500;
+}
+
+.contact-panel.overview-card h3 {
+  margin: 0;
+  font-size: 2.08rem;
+  line-height: 1.2;
+  color: #2f4a34;
 }
 
 .contact-items {
@@ -665,6 +689,12 @@ button {
   background: #fefcf7;
 }
 
+#contact .contact-grid.showcase-grid.about-showcase-grid {
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: url("assets/contact-bg.png") center / cover no-repeat;
+}
+
 .about-shell {
   position: relative;
 }
@@ -728,6 +758,43 @@ button {
   align-content: center;
 }
 
+.leadership-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.leader-card {
+  text-align: center;
+}
+
+.leader-photo {
+  width: 130px;
+  aspect-ratio: 1;
+  margin: 0 auto 0.9rem;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fefcf7;
+  box-shadow:
+    inset 0 0 0 1px rgba(40, 90, 72, 0.08),
+    0 10px 22px rgba(67, 91, 57, 0.1);
+}
+
+.leader-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.02rem;
+  line-height: 1.3;
+  color: #2f4a34;
+}
+
+.leader-role {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #5c6757;
+}
+
 .about-copy.overview-card p,
 .overview-card p {
   color: #5c6757;
@@ -771,13 +838,14 @@ button {
 }
 
 .services-showcase-grid {
-  align-items: start;
+  align-items: stretch;
   gap: 1rem;
 }
 
 .services-card {
   position: relative;
   overflow: hidden;
+  height: 100%;
   min-height: 170px;
   padding: 1.5rem 1.35rem 1.3rem;
   border: 1px solid rgba(70, 103, 66, 0.1);
@@ -950,7 +1018,7 @@ button {
 .markets-shell {
   padding: 2rem 1.6rem 2rem;
   background:
-    linear-gradient(rgba(252, 250, 242, 0.76), rgba(248, 244, 233, 0.82)),
+    linear-gradient(rgba(252, 250, 242, 0.24), rgba(248, 244, 233, 0.28)),
     url("assets/markets-map-bg.png") center / cover no-repeat,
     radial-gradient(circle at 50% 16%, rgba(255, 255, 255, 0.98), rgba(252, 248, 239, 0.95) 56%, rgba(247, 242, 230, 0.98) 100%);
 }
@@ -1070,7 +1138,6 @@ button {
   position: absolute;
   inset: 0;
   background: url("assets/markets-map.svg") center / contain no-repeat;
-  opacity: 0.86;
 }
 
 .map-pin {
@@ -1196,60 +1263,17 @@ button {
   box-shadow: 0 14px 26px rgba(64, 138, 113, 0.14);
 }
 
-.product-thumb {
-  height: 88px;
+.product-image {
+  width: 100%;
+  height: 190px;
   margin-bottom: 0.95rem;
+  object-fit: cover;
   border-radius: 12px;
-  background-size: cover;
-  background-position: center;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 }
 
-.product-thumb-agri {
-  background:
-    radial-gradient(circle at 18% 70%, #d86d32 0 12px, transparent 13px),
-    radial-gradient(circle at 31% 56%, #efb348 0 12px, transparent 13px),
-    radial-gradient(circle at 43% 42%, #6e8d39 0 18px, transparent 19px),
-    radial-gradient(circle at 58% 48%, #88ad45 0 20px, transparent 21px),
-    radial-gradient(circle at 74% 64%, #bf4f2d 0 10px, transparent 11px),
-    linear-gradient(180deg, #f0e2bd 0%, #8aa654 56%, #6f8b45 100%);
-}
-
-.product-thumb-spice {
-  background:
-    radial-gradient(circle at 19% 48%, #a36a29 0 18px, transparent 19px),
-    radial-gradient(circle at 38% 38%, #d0a141 0 17px, transparent 18px),
-    radial-gradient(circle at 56% 58%, #bb5e25 0 18px, transparent 19px),
-    radial-gradient(circle at 74% 42%, #d6bb57 0 18px, transparent 19px),
-    linear-gradient(180deg, #825225 0%, #d29b49 62%, #6d421f 100%);
-}
-
-.product-thumb-textile {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.12)),
-    repeating-linear-gradient(90deg, #7a2f49 0 18px, #9d4f70 18px 36px, #475c8c 36px 54px, #c18a58 54px 72px, #6b355d 72px 90px);
-}
-
-.product-thumb-fmcg {
-  background:
-    radial-gradient(circle at 16% 62%, #ef8929 0 10px, transparent 11px),
-    radial-gradient(circle at 28% 50%, #63ac53 0 11px, transparent 12px),
-    radial-gradient(circle at 40% 62%, #f1c53d 0 10px, transparent 11px),
-    radial-gradient(circle at 54% 49%, #db5c69 0 11px, transparent 12px),
-    radial-gradient(circle at 68% 61%, #4a98d0 0 10px, transparent 11px),
-    radial-gradient(circle at 82% 50%, #efaa34 0 11px, transparent 12px),
-    linear-gradient(180deg, #efe8d7 0%, #d9ebc5 100%);
-}
-
-.product-thumb-industrial {
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(0, 0, 0, 0.14)),
-    repeating-linear-gradient(135deg, #4d555e 0 18px, #7a8289 18px 36px, #b1854d 36px 54px, #6d7177 54px 72px),
-    linear-gradient(180deg, #cab692 0%, #72767c 100%);
-}
-
 .product-card h3 {
-  margin: 0 0 0.55rem;
+  margin: 0;
   font-size: 1.05rem;
   line-height: 1.3;
   color: #2f4a34;
@@ -1356,6 +1380,18 @@ button {
 
   .about-grid {
     align-items: center;
+  }
+
+  .mission-grid {
+    align-items: stretch;
+  }
+
+  .about-highlights {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .leadership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .footer-grid {
