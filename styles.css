@@ -247,6 +247,7 @@ button {
 .hero {
   position: relative;
   overflow: hidden;
+  scroll-margin-top: calc(var(--nav-height) + 0.5rem);
   padding: 4rem 0 5rem;
   background:
     url("assets/home-bg.jpg") center / cover no-repeat,
@@ -1164,6 +1165,68 @@ button {
 .map-pin-4 { left: 52%; top: 51%; }
 .map-pin-5 { left: 62%; top: 65%; }
 .map-pin-6 { right: 5.5%; top: 31%; }
+
+@media (max-width: 699px) {
+  .markets-map-wrap {
+    min-height: 0;
+    aspect-ratio: 1 / 1.05;
+    padding: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .markets-pills {
+    gap: 0.7rem;
+  }
+
+  .market-tag,
+  .market-pill {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.72rem 0.9rem;
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+
+  .market-pill-wide {
+    margin-left: 0;
+  }
+
+  .market-pill-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .market-pill-icon::before {
+    width: 12px;
+    height: 12px;
+  }
+
+  .market-pill:nth-child(1) .market-pill-icon::after,
+  .market-pill:nth-child(2) .market-pill-icon::after,
+  .market-pill:nth-child(3) .market-pill-icon::after,
+  .market-pill:nth-child(4) .market-pill-icon::after,
+  .market-pill:nth-child(5) .market-pill-icon::after {
+    inset: 6px;
+  }
+
+  .markets-map {
+    opacity: 0.18;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .map-pin {
+    width: 14px;
+    height: 14px;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.72);
+  }
+
+  .map-pin::before {
+    inset: 4px;
+  }
+}
 
 @media (min-width: 900px) {
   .markets-map-wrap {
